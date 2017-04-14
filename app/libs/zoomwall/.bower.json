@@ -1,0 +1,36 @@
+{
+  "name": "zoomwall",
+  "main": "zoomwall.js",
+  "ignore": [
+    "LICENSE",
+    "README.md"
+  ],
+  "homepage": "https://github.com/ericleong/zoomwall.js",
+  "authors": [
+    {
+      "name": "Eric Leong",
+      "email": "me@ericleong.me",
+      "homepage": "http://ericleong.me"
+    }
+  ],
+  "description": "A content-focused photo gallery using a horizontal masonry layout that scales up in lightbox mode.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "gallery",
+    "image"
+  ],
+  "license": "MIT",
+  "version": "1.1.1",
+  "_release": "1.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.1",
+    "commit": "d44f0191ae7266b25afaa5ed93008fce8ac6efa2"
+  },
+  "_source": "https://github.com/ericleong/zoomwall.js.git",
+  "_target": "^1.1.1",
+  "_originalSource": "zoomwall",
+  "_direct": true
+}
