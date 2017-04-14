@@ -120,12 +120,20 @@ body {
         padding-right: 15px;
     }
     .header__phone {
-        font-size: 20px;
+        font-size: 15px;
         font-family: "OpenSans-Regular";
+        margin-right: 10px;
+        padding-top: 10px;
         img {
             position: relative;
             margin-top: -4px;
-            margin-right: 10px;
+            margin-right: 5px;
+        }
+        .desc {
+            text-align: center;
+            color: $text-color;
+            font-size: 12px;
+            font-family: "Geometria-Light";
         }
     }
     .header__button {
@@ -2219,6 +2227,37 @@ body.category-educational_center .video {
     &:hover {
         background-size: 10px 10px;
         transform: rotate(360deg);
+    }
+}
+
+/* ============================ page-about ============================ */
+
+.page-about {
+    &__title {
+        font-size: 30px;
+        font-family: "Geometria";
+        color: $black;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+    &__text {
+        color: $text-color;
+        margin-top: 70px;
+        font-size: 18px;
+        font-family: "Geometria";
+    }
+}
+
+/* ============================ partners ============================ */
+
+.partners {
+    margin: 80px 0;
+    &__title {
+        color: $black;
+        text-transform: uppercase;
+        font-family: "Geometria-Medium";
+        font-size: 30px;
+        margin-bottom: 80px;
     }
 }
 

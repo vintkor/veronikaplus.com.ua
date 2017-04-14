@@ -39,6 +39,15 @@
             <div class="row header__top-flex">
                 <div class="header__phone">
                     <img src="<?php echo get_template_directory_uri(); ?>/app/img/phone.png"> 093-000-00-00
+                    <p class="desc">Студия-магазин</p>
+                </div>
+                <div class="header__phone">
+                    <img src="<?php echo get_template_directory_uri(); ?>/app/img/phone.png"> 093-000-00-00
+                    <p class="desc">Центр красоты</p>
+                </div>
+                <div class="header__phone">
+                    <img src="<?php echo get_template_directory_uri(); ?>/app/img/phone.png"> 093-000-00-00
+                    <p class="desc">Учебный центр</p>
                 </div>
                 <div class="header__button__wrapper">
                     <button class="header__button" data-toggle="modal" data-target="#my-bron">оставить заявку</button>
