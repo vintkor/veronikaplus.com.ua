@@ -174,7 +174,7 @@ Template Name: Главная
         <?php endwhile; wp_reset_query(); ?>
     </div>
     <div class="align-center">
-        <a href="#" class="sec_centr__link-more">
+        <a href="/category/beauty_centr/" class="sec_centr__link-more">
             полный список процедур <img src="<?php echo get_template_directory_uri(); ?>/app/img/Forward.png">
         </a>
     </div>    

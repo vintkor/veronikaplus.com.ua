@@ -618,7 +618,7 @@ body.category .sec_centr:before {
         margin-bottom: 25px;
     }
     &__subcat-item {
-        font-family: "OpenSans-Regular";
+        font-family: "OpenSans-Regular", sans-serif;
         font-size: 12px;
         color: $text-color;
         img {
@@ -632,7 +632,7 @@ body.category .sec_centr:before {
         text-transform: uppercase;
         padding: 13px 15px;
         font-size: 12px;
-        font-family: "OpenSans-Semibold";
+        font-family: "OpenSans-Semibold", sans-serif;
         background: $white;
         display: inline;
         margin-left: 20px;
@@ -646,13 +646,12 @@ body.category .sec_centr:before {
         }
     }
     &__call {
-        border: 1px solid $text-color;
         border-radius: 22px;
         color: $white;
         text-transform: uppercase;
         padding: 13px 15px;
         font-size: 12px;
-        font-family: "OpenSans-Semibold";
+        font-family: "OpenSans-Semibold", sans-serif;
         background: $main-color;
         border: 1px solid $main-color;
         display: inline;
@@ -666,7 +665,7 @@ body.category .sec_centr:before {
     }
     &__link-more {
         color: $text-color;
-        font-family: "OpenSans-Semibold";
+        font-family: "OpenSans-Semibold", sans-serif;
         font-size: 26px;
         img {
             position: relative;
@@ -684,7 +683,7 @@ body.category .sec_centr:before {
     }
     &__inner-top-title {
         color: $black;
-        font-family: "Geometria-Medium";
+        font-family: "Geometria-Medium", sans-serif;
         font-size: 30px;
         margin: 40px 0 70px;
     }
@@ -697,7 +696,7 @@ body.category .sec_centr:before {
     &__inner-top-subtitte {
         color: $black;
         font-size: 30px;
-        font-family: "Geometria-Medium";
+        font-family: "Geometria-Medium", sans-serif;
         margin-bottom: 30px;
         padding-left: 40px;
     }
@@ -705,12 +704,12 @@ body.category .sec_centr:before {
         padding: 0 40px;
         font-size: 18px;
         color: $text-color;
-        font-family: "Geometria";
+        font-family: "Geometria", sans-serif;
         line-height: 24px;
     }
     &__inner-cat-title {
         font-size: 30px;
-        font-family: "Geometria-Medium";
+        font-family: "Geometria-Medium", sans-serif;
         color: $black;
         margin: 120px 0 80px;
         text-transform: uppercase;
@@ -725,20 +724,20 @@ body.category .sec_centr:before {
     padding-top: 63px;
     &__title {
         font-size: 30px;
-        font-family: "Geometria-Medium";
+        font-family: "Geometria-Medium", sans-serif;
         color: $black;
         margin-top: 25px;
     }
     &__subtitle {
         font-size: 18px;
-        font-family: "Geometria-Medium";
+        font-family: "Geometria-Medium", sans-serif;
         color: $black;
         margin-bottom: 40px;
     }
     &__address {
         color: $text-color;
         font-size: 14px;
-        font-family: "Geometria-Light";
+        font-family: "Geometria-Light", sans-serif;
         margin-bottom: 18px;
         span {
             width: 16px;
@@ -758,7 +757,7 @@ body.category .sec_centr:before {
             background: $footer-color;
             color: $white;
             font-size: 14px;
-            font-family: "Geometria";
+            font-family: "Geometria", sans-serif;
             line-height: 24px;
         }
         input {
@@ -771,7 +770,7 @@ body.category .sec_centr:before {
             &::placeholder {
                 color: $white;
                 font-size: 14px;
-                font-family: "Geometria";
+                font-family: "Geometria", sans-serif;
                 line-height: 24px;
                 text-transform: uppercase;
             }
@@ -787,7 +786,7 @@ body.category .sec_centr:before {
             color: $white;
             text-transform: uppercase;
             font-size: 14px;
-            font-family: "Geometria";
+            font-family: "Geometria", sans-serif;
             transition: .2s;
             &:hover {
                 background: $green;
@@ -1615,7 +1614,7 @@ body.category-educational_center .video {
 // кнопка добавить в корзину
 .add_to_cart_btn {
     background: $main-color;
-    width: 100px;
+    width: 80px;
     height: 50px;
     display: inline-block;
     display: flex;

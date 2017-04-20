@@ -150,25 +150,41 @@ function save_extend_comment_meta_data( $comment_id ){
 }
 
 add_filter( 'woocommerce_currencies', 'add_my_currency' );
-
 function add_my_currency( $currencies ) {
-
      $currencies['UAH'] = __( 'Українська гривня', 'woocommerce' );
-
      return $currencies;
-
 }
 
 add_filter('woocommerce_currency_symbol', 'add_my_currency_symbol', 10, 2);
-
 function add_my_currency_symbol( $currency_symbol, $currency ) {
-
-     switch( $currency ) {
-
-         case 'UAH': $currency_symbol = 'грн'; break;
-
-     }
-
-     return $currency_symbol;
-
+    switch( $currency ) {
+        case 'UAH': $currency_symbol = 'грн'; break;
+    }
+    return $currency_symbol;
 }
+
+
+function getReviewsCount() {
+    $options = array(
+        'category_name' => 'testimonals',
+        'post_status' => 'draft',
+    );
+    $query = new WP_Query($options);
+    return $query;
+}
+
+function example_dashboard_widget_function(){
+    echo '<ol>';
+    foreach (getReviewsCount()->posts as $post) {
+        $content = mb_substr($post->post_content, 0, 200);
+        echo "<li>$post->post_date &rarr; $content &rarr; <a href='/wp-admin/post.php?post=$post->ID&action=edit'>Редактировать</a></li>";
+    }
+    echo '</ol>';
+}
+
+// Создаем функцию, используя хук действия
+function example_add_dashboard_widgets() {
+    wp_add_dashboard_widget('example_dashboard_widget', 'Отзывы ожидающие проверки', 'example_dashboard_widget_function');
+}
+// Хук в 'wp_dashboard_setup', чтобы зарегистрировать нашу функцию среди других
+add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
