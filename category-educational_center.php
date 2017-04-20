@@ -3,7 +3,7 @@
 <section class="edu-center">
     <h1 class="edu-center__maintitle align-center">ПРОГРАММА КУРСОВ</h1>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5 col-sm-4">
             <h2 class="edu-center__cat-maintitle">НАПРАВЛЕНИЕ ОБУЧЕНИЯ</h2>
             <div class="edu-center__tabs2-nav edu-center__tabs2-nav-1 animated fadeIn">
                 <ul class="edu-center__cat-list">
@@ -28,7 +28,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 col-sm-8">
             <div class="edu-center__tabs2">
                 <div class="edu-center__tabs2-link active" data-id="1">Основные курсы</div>
                 <div class="edu-center__tabs2-link" data-id="2">Дополнительные курсы</div>
@@ -41,10 +41,10 @@
                     <div class="edu-center__tab animated fadeIn edu-center__tab-<?php echo get_the_ID(); ?>" 
                         style="display: <?php echo ($count == 0) ? 'block' : 'none'; ?>">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-5">
                                 <?php the_post_thumbnail(' img-responsive'); ?>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-7">
                                 <p class="edu-center__tab-date">Старт программы:<br>
                                     <span><?php echo mysql2date('j/m/Y', get_field('дата') );?></span>
                                 </p>
@@ -82,10 +82,10 @@
                     <div class="edu-center__tab3 animated fadeIn edu-center__tab3-<?php echo get_the_ID(); ?>" 
                         style="display: <?php echo ($count4 == 0) ? 'block' : 'none'; ?>">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-5">
                                 <?php the_post_thumbnail(' img-responsive'); ?>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-7">
                                 <p class="edu-center__tab-date">Старт программы:<br>
                                     <span><?php echo mysql2date('j/m/Y', get_field('дата') );?></span>
                                 </p>
@@ -121,11 +121,11 @@
 
 <section class="video">
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-7 col-sm-6">
             <img src="<?php echo get_template_directory_uri();?>/app/img/video2.png" class="img-responsive video__image">
             <a href="https://www.youtube.com/watch?v=gQtms53wew4" data-lity class="video__link"><img src="<?php echo get_template_directory_uri();?>/app/img/play.png"></a>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 col-sm-6">
             <h3 class="video__title">мы учимся и работаем вместе!</h3>
             <p class="video__desc">Сотни человек после обучения у нас преобрели профессию, лучшие из них - работают с нами!</p>
         </div>

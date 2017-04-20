@@ -20,9 +20,9 @@ if( is_single() ):?>
 <div class="col-md-12">
     <div class="row">
 <?php else: ?>
-<div class="col-md-3">
+<div class="col-md-3 col-sm-4 widget__filter">
 <?php dynamic_sidebar('woo_filter'); ?>
 </div>
-<div class="col-md-9">
+<div class="col-md-9 col-sm-8">
     <div class="row">
 <?php endif; ?>

@@ -34,7 +34,7 @@ foreach ($cart_contents as $item) {
 
 ?>
 
-<div class="col-md-3 padding-0 one_product">
+<div class="col-md-3 col-sm-6 padding-0 one_product">
     <div <?php post_class(''); ?>>
     <?php
         $badges = get_field('product_badge');

@@ -60,7 +60,7 @@ Template Name: Главная
     </div>
     <div class="row">
         <?php foreach($categories_tree as $parent_cat): ?>
-            <div class="col-md-6 sec_about__categories">
+            <div class="col-md-6 col-sm-6 sec_about__categories">
                 <div class="sec_about__category" style="background-image: url(<?php echo $parent_cat['image']; ?>)"></div>
                 <h3 class="sec_about__cat-title">
                     <a class="sec_about__parent-link" href="<?php echo $parent_cat['link']; ?>"><?php echo $parent_cat['name']; ?></a>
@@ -68,7 +68,7 @@ Template Name: Главная
                 <div class="row flex">
                     <?php if( count($parent_cat['children']) > 0 ): ?>
                         <?php foreach($parent_cat['children'] as $child_cat): ?>
-                            <div class="col-md-6">
+                            <div class="col-md-6 sec_about__item">
                                 <div class="sec_about__sub-cat">
                                     <img src="<?php echo $child_cat['image'] ?>" class="sec_about__sub-image">
                                     <h4 class="sec_about__sub-cat-title">
@@ -145,7 +145,7 @@ Template Name: Главная
         <?php $idObj = get_category_by_slug('beauty_centr'); $id = $idObj->term_id; $n=6;
         $recent = new WP_Query("cat=$id&showposts=$n");?>
         <?php while($recent->have_posts()) : $recent->the_post();?>
-        <div class="col-md-4 sec_centr__categories">
+        <div class="col-md-4 col-sm-6 sec_centr__categories">
             <div class="sec_centr__cat-wrapper">
                 <div class="sec_centr__cat-image" style="background-image: url(<?php $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
                     echo $thumb_url[0];
@@ -156,13 +156,13 @@ Template Name: Главная
                     <p>Описание процедуры: <?php echo get_the_excerpt(); ?></p>
                 </div>
                 <div class="row sec_centr__subcat-items">
-                    <div class="col-md-4 sec_centr__subcat-item">
+                    <div class="col-md-4 col-sm-4 col-xs-4 sec_centr__subcat-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/app/img/calendar.png"> <?php the_field('сеанс'); ?>
                     </div>
-                    <div class="col-md-4 sec_centr__subcat-item">
+                    <div class="col-md-4 col-sm-4 col-xs-4 sec_centr__subcat-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/app/img/clock.png"> <?php the_field('длительность'); ?>
                     </div>
-                    <div class="col-md-4 sec_centr__subcat-item">
+                    <div class="col-md-4 col-sm-4 col-xs-4 sec_centr__subcat-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/app/img/price.png"> <?php the_field('стоимость'); ?>
                     </div>
                 </div>
@@ -189,7 +189,7 @@ Template Name: Главная
         <?php $idObj = get_category_by_slug('educational_center'); $id = $idObj->term_id; $n=6;
         $recent = new WP_Query("cat=$id&showposts=$n");?>
         <?php while($recent->have_posts()) : $recent->the_post();?>
-        <div class="col-md-4 sec_courses__categories">
+        <div class="col-md-4 col-sm-6 sec_courses__categories">
             <div class="sec_courses__cat-wrapper">
                 <div class="sec_courses__cat-image" style="background-image: url(<?php $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
                     echo $thumb_url[0];
@@ -199,13 +199,13 @@ Template Name: Главная
                     <p>Описание курса: <?php echo get_the_excerpt(); ?></p>
                 </div>
                 <div class="row sec_courses__subcat-items">
-                    <div class="col-md-4 sec_courses__subcat-item">
+                    <div class="col-md-4 col-sm-4 col-xs-4 sec_courses__subcat-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/app/img/calendar.png"> <?php the_field('сеанс'); ?>
                     </div>
-                    <div class="col-md-4 sec_courses__subcat-item">
+                    <div class="col-md-4 col-sm-4 col-xs-4 sec_courses__subcat-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/app/img/clock.png"> <?php the_field('длительность'); ?>
                     </div>
-                    <div class="col-md-4 sec_courses__subcat-item">
+                    <div class="col-md-4 col-sm-4 col-xs-4 sec_courses__subcat-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/app/img/price.png"> <?php the_field('стоимость'); ?>
                     </div>
                 </div>

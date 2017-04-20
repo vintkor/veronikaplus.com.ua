@@ -24,6 +24,9 @@ $('document').ready(function(){
         navText: [ '', '' ],
         nav: true,
         responsive: {
+            0: {
+                items: 1
+            },
             600: {
                 items: 3
             }
@@ -115,6 +118,15 @@ $('document').ready(function(){
         $('.edu-center__tab2-' + eduCenterID).show();
         $('.edu-center__tabs2-nav-' + eduCenterID).show();
     });
+
+    // Меняем местами блоки в категории Блог
+    var windowWidth = $(document).width();
+    if( windowWidth < 768 ) {
+        $('.prepend').each(function(){
+            var blockBottom = $(this).find('.block-bottom');
+            blockBottom.prependTo($(this));
+        });
+    }
 	
 });
 

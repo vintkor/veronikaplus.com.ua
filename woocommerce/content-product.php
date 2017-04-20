@@ -28,9 +28,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <?php if( is_single() ): ?>
-	<div class="col-md-3 padding-0 one_product">
+	<div class="col-md-3 col-sm-6 padding-0 one_product">
 <?php else: ?>
-	<div class="col-md-4 padding-0 one_product">
+	<div class="col-md-4 col-sm-6 padding-0 one_product">
 <?php endif; ?>
 
 <?php

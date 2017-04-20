@@ -5,22 +5,22 @@
 <section class="prefooter">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3">
                 <div class="prefooter__text-widget1">
                     <?php dynamic_sidebar('w_footer_1'); ?>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3">
                 <div class="prefooter__text-widget2">
                     <?php dynamic_sidebar('w_footer_2'); ?>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3">
                 <div class="prefooter__text-widget3">
                     <?php dynamic_sidebar('w_footer_3'); ?>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3">
                 <div class="prefooter__social">
                     <p>мы в соцсетях</p>
                     <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/facebook.png"></a>

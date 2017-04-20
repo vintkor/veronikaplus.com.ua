@@ -40,7 +40,7 @@ global $product;
 
 <div id="product-<?php the_ID(); ?>" <?php post_class('col-md-12'); ?>>
 	<div class="row">
-		<div class="col-md-7">
+		<div class="col-md-7 col-sm-6">
 			<?php
 				/**
 				 * woocommerce_before_single_product_summary hook.
@@ -51,7 +51,7 @@ global $product;
 				do_action( 'woocommerce_before_single_product_summary' );
 			?>		
 		</div>
-		<div class="col-md-5 product_right_column_wrapper">
+		<div class="col-md-5 col-sm-6 product_right_column_wrapper">
 
 				<?php
 					/**

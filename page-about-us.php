@@ -14,8 +14,8 @@ Template Name: О нас
                 $photo1 = get_field('фото_1');
                 $photo2 = get_field('фото_2');
             ?>
-            <div class="col-md-6"><img class="img-responsive" src="<?php echo $photo1['url']; ?>"></div>
-            <div class="col-md-6"><img class="img-responsive" src="<?php echo $photo2['url']; ?>"></div>
+            <div class="col-md-6 col-sm-6 col-xs-6"><img class="img-responsive" src="<?php echo $photo1['url']; ?>"></div>
+            <div class="col-md-6 col-sm-6 col-xs-6"><img class="img-responsive" src="<?php echo $photo2['url']; ?>"></div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -33,7 +33,7 @@ Template Name: О нас
         <?php $idObj = get_category_by_slug('partners'); $id = $idObj->term_id; $n=9;
         $recent = new WP_Query("cat=$id&showposts=$n");?>
         <?php while($recent->have_posts()) : $recent->the_post();?>
-            <div class="col-md-4">
+            <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2 ">
                 <div class="partners__image-wrapper align-center">
                     <?php $photo3 = get_field('фото'); ?>
                     <img src="<?php echo $photo3['url']; ?>" class="img-responsive">

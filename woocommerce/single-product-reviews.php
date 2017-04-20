@@ -44,7 +44,7 @@ if( count($post_comments)  > 0 ) {
 		<h2 class="product_reviews_title">Отзывы</h2>
 		<div class="row">
 		<?php if( count($post_comments)  > 0 ): ?>
-			<div class="col-md-3">
+			<div class="col-md-3 col-sm-4">
 				<div class="my_comment__all-rating">
 					<p>Рейтинг товара:</p>
 					<p>
@@ -53,12 +53,12 @@ if( count($post_comments)  > 0 ) {
 					</p>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-sm-4">
 				<p>Рекомендуют:</p>
 				<img src="<?php echo get_template_directory_uri(); ?>/app/img/check.png">
 				<?php echo array_sum($total_recomend); ?>
 			</div>
-			<div class="col-md-3 col-md-offset-3">
+			<div class="col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-0">
 				<p>Преобрели товар?</p>
 				<button id="add__comment" class="add__comment" data-toggle="modal" data-target="#myModal">
 					<img src="<?php echo get_template_directory_uri(); ?>/app/img/btn_comment.png">

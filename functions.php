@@ -164,7 +164,8 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 }
 
 
-function getReviewsCount() {
+// Виджет в консоли "Отзывы ожидающие проверки"
+function getDraftReviews() {
     $options = array(
         'category_name' => 'testimonals',
         'post_status' => 'draft',
@@ -175,7 +176,7 @@ function getReviewsCount() {
 
 function example_dashboard_widget_function(){
     echo '<ol>';
-    foreach (getReviewsCount()->posts as $post) {
+    foreach (getDraftReviews()->posts as $post) {
         $content = mb_substr($post->post_content, 0, 200);
         echo "<li>$post->post_date &rarr; $content &rarr; <a href='/wp-admin/post.php?post=$post->ID&action=edit'>Редактировать</a></li>";
     }
@@ -188,3 +189,13 @@ function example_add_dashboard_widgets() {
 }
 // Хук в 'wp_dashboard_setup', чтобы зарегистрировать нашу функцию среди других
 add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
+
+// images auto class
+function add_image_responsive_class($content) {
+   global $post;
+   $pattern ="/<img(.*?)class=\"(.*?)\"(.*?)>/i";
+   $replacement = '<img$1class="$2 img-responsive"$3>';
+   $content = preg_replace($pattern, $replacement, $content);
+   return $content;
+}
+add_filter('the_content', 'add_image_responsive_class');
