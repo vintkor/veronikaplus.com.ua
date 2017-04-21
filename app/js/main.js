@@ -1,5 +1,7 @@
 $('document').ready(function(){
 
+    var windowWidth = $(document).width();
+
     $(".owl-carousel-1").owlCarousel({
         items: 1,
         loop: true,
@@ -89,6 +91,9 @@ $('document').ready(function(){
         var eduCenterID = $(this).data('id');
         $('.edu-center__tab').hide();
         $('.edu-center__tab-' + eduCenterID).show();
+        if( windowWidth < 768 ) {
+            $('html, body').animate({scrollTop: $('.edu-center__tab-' + eduCenterID).offset().top}, 800);
+        }
     });
 
     var urlHash = window.location.hash;
@@ -107,6 +112,9 @@ $('document').ready(function(){
         var eduCenterID = $(this).data('id');
         $('.edu-center__tab3').hide();
         $('.edu-center__tab3-' + eduCenterID).show();
+        if( windowWidth < 768 ) {
+            $('html, body').animate({scrollTop: $('.edu-center__tab3-' + eduCenterID).offset().top}, 800);
+        }
     });
 
     $('.edu-center__tabs2-link').click(function(){
@@ -117,17 +125,45 @@ $('document').ready(function(){
         $('.edu-center__tabs2-nav').hide();
         $('.edu-center__tab2-' + eduCenterID).show();
         $('.edu-center__tabs2-nav-' + eduCenterID).show();
+        if( windowWidth < 768 ) {
+            $('html, body').animate({scrollTop: $('.edu-center__cat-maintitle').offset().top}, 800);
+        }
     });
 
     // Меняем местами блоки в категории Блог
-    var windowWidth = $(document).width();
     if( windowWidth < 768 ) {
         $('.prepend').each(function(){
             var blockBottom = $(this).find('.block-bottom');
             blockBottom.prependTo($(this));
         });
     }
+
+    // Мобильное меню
+    $('#menu-top-navigate').slicknav({
+        appendTo: '#mobile-menu',
+        label: 'Меню'
+    });
+
+    // Скрытие фильтров в мобильной версии
+    if( windowWidth < 768 ) {
+        var filterWidget = $('.widget__filter');
+        filterWidget.find('.widget').hide();
+        filterWidget.append('<button id="show-filter">Показать фильтр</button>');
+        filterWidget.append('<button id="hide-filter" style="display: none;">Скрыть фильтр</button>');
+        var showFilter = $('#show-filter');
+        var hideFilter = $('#hide-filter');
+        showFilter.click(function() {
+            filterWidget.find('.widget').show(300);
+            showFilter.toggle(300);
+            hideFilter.toggle(300);
+            $('html, body').animate({scrollTop: filterWidget.offset().top}, 800);
+        });
+        hideFilter.click(function() {
+            filterWidget.find('.widget').hide(300);
+            showFilter.toggle(300);
+            hideFilter.toggle(300);
+            $('html, body').animate({scrollTop: filterWidget.offset().top}, 800);
+        });
+    }
 	
 });
-
-

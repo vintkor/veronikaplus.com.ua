@@ -69,6 +69,8 @@
     </div>
 </header>
 
+<div id="mobile-menu"></div>
+
 <?php if( !is_front_page() ): ?>
 <section class="bread">
     <div class="row">

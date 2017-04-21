@@ -36,6 +36,7 @@ gulp.task('scripts', function() {
         'app/libs/sweetalert2/dist/sweetalert2.min.js',
         'app/libs/zoomwall/zoomwall.js',
         'app/libs/lityjs/dist/lity.js',
+        'app/libs/slicknav/dist/jquery.slicknav.js',
         // 'app/libs/jquery.maskedinput/dist/jquery.maskedinput.js',
         // 'app/libs/headroom.js/dist/headroom.js',
         // 'app/libs/jquery-scrollto.js',

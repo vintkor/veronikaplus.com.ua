@@ -970,7 +970,7 @@
     //         background: $white;
     //         color: $text-color;
     //         border: none;
-            padding: 23px 16px 17px;
+            padding: 23px 14px 17px;
             font-size: 13px;
     //         font-family: "Geometria";
     //         text-transform: uppercase;
@@ -1003,16 +1003,16 @@
 
     // /* ============================ video ============================ */
 
-    // .video {
+    .video {
     //     background: $white;
-    //     padding: 15px 0 120px;
-    //     &__title {
+        padding: 15px 0 30px;
+        &__title {
     //         color: $black;
     //         font-size: 24px;
     //         font-family: "Geometria-Medium";
     //         position: relative;
     //         max-width: 330px;
-    //         margin-left: 40px;
+            margin-left: 0;
     //         display: inline-block;
     //         text-transform: uppercase;
     //         &:after {
@@ -1025,25 +1025,25 @@
     //             width: 135px;
     //             background: $main-color;
     //         }
-    //     }
-    //     &__desc {
+        }
+        &__desc {
     //         color: $text-color;
     //         font-family: "Geometria";
     //         font-size: 18px;
     //         line-height: 31px;
     //         margin-top: 60px;
     //         max-width: 330px;
-    //         margin-left: 40px;
+            margin-left: 0;
     //         display: inline-block;
-    //     }
-    //     &__youtube {
+        }
+        &__youtube {
     //         color: $text-color;
-    //         font-size: 24px;
+            font-size: 18px;
     //         font-family: "Geometria";
     //         text-decoration: underline;
     //         margin-top: 40px;
     //         display: inline-block;
-    //     }
+        }
     //     &__link {
     //         display: block;
     //         position: absolute;
@@ -1054,15 +1054,15 @@
     //         width: 97px;
     //         height: 97px;
     //     }
-    // }
+    }
 
-    // body.category-educational_center .video {
-    //     margin-top: 80px;
-    // }
+    body.category-educational_center .video {
+        margin-top: 0px;
+    }
 
     // /* ============================ edu-center ============================ */
 
-    // .edu-center {
+    .edu-center {
     //     background: $white;
     //     padding: 40px 0;
     //     &__maintitle {
@@ -1092,8 +1092,8 @@
     //     &__cat-list-li {
     //         list-style: none;
     //     }
-        // &__cat-list-link,
-        // &__tabs2-cat-list-link {
+        &__cat-list-link,
+        &__tabs2-cat-list-link {
     //         color: $black;
     //         font-size: 14px;
             // line-height: 20px;
@@ -1103,22 +1103,22 @@
     //         padding-top: 5px;
     //         padding-bottom: 5px;
     //         border-bottom: 1px solid rgba($black, .1);
-    //         &:after {
+            &:after {
     //             content: "";
     //             display: block;
     //             position: absolute;
-    //             top: 19px;
+                top: 12px;
     //             left: 0px;
     //             width: 6px;
     //             height: 6px;
     //             background: $black;
     //             border-radius: 50%;
-    //         }
+            }
     //         &:hover {
     //             color: $main-color;
     //             text-decoration: none;
     //         }
-        // }
+        }
     //     &__tab-date {
     //         color: $text-color;
     //         font-size: 20px;
@@ -1133,17 +1133,17 @@
     //         font-size: 18px;
     //         margin-bottom: 30px;
     //     }
-    //     &__tab-field {
+        &__tab-field {
     //         color: $text-color;
     //         font-family: "OpenSans-Regular";
     //         font-size: 16px;
-    //         margin-bottom: 20px;
+            margin-bottom: 10px;
     //         img {
     //             display: inline-block;
     //             position: relative;
     //             margin-right: 15px;
     //         }
-    //     }
+        }
     //     &__tab-button {
     //         background: $main-color;
     //         color: $white;
@@ -1152,15 +1152,15 @@
     //         padding: 14px 30px;
     //         text-transform: uppercase;
     //     }
-    //     &__tab-text {
+        &__tab-text {
     //         color: $text-color;
-    //         font-size: 18px;
+            font-size: 16px;
     //         font-family: "Geometria";
     //         max-height: 500px;
     //         overflow-Y: auto;
     //         padding: 10px;
     //         padding-bottom: 50px;
-    //     }
+        }
     //     &__tab-text-wrapper {
     //         margin-top: 50px;
     //         position: relative;
@@ -1179,9 +1179,9 @@
     //     &__tabs2 {
     //         display: flex;
     //     }
-    //     &__tabs2-link {
+        &__tabs2-link {
     //         width: 50%;
-    //         font-size: 18px;
+            font-size: 16px;
     //         font-family: "Geometria";
     //         color: $text-color;
     //         border-bottom: 6px solid $text-color;
@@ -1192,11 +1192,11 @@
     //             color: $main-color;
     //             border-color: $main-color;
     //         }
-    //     }
+        }
     //     &__tab2 {
     //         padding-top: 30px;
     //     }
-    // }
+    }
 
     // .edu-center__tabs2-link.active {
     //     color: $main-color;
@@ -1925,21 +1925,21 @@
     //     line-height: 28px;
     // }
 
-    // .my_product_attributes {
+    .my_product_attributes {
     //     margin: 0;
     //     padding: 0;
-    //     li {
+        li {
     //         color: darken($white, 40%);
-    //         font-size: 18px;
-    //         line-height: 27px;
+            font-size: 14px;
+            line-height: 24px;
     //         font-family: "Geometria-Medium";
     //         list-style: none;
     //         p {
     //             font-family: "Geometria";
     //             display: inline;
     //         }
-    //     }
-    // }
+        }
+    }
 
     // .product_right_column_wrapper .woocommerce-Price-amount {
     //     padding: 11px 55px;
@@ -1980,13 +1980,13 @@
     //     }
     // }
 
-    // .product_description {
+    .product_description {
     //     color: darken($white, 40%);
     //     font-family: "Geometria";
-    //     font-size: 18px;
+        font-size: 16px;
     //     line-height: 24px;
     //     padding: 30px 0 60px;
-    // }
+    }
 
     // .woocommerce div.product .woocommerce-tabs ul.tabs {
     //     display: none;
@@ -2330,6 +2330,65 @@
         &__image-wrapper {
             margin-bottom: 15px;
         }
+    }
+
+    /* ================================================================== */
+    /* ============================ SlickNav ============================ */
+    /* ================================================================== */
+
+    .js #menu-top-navigate {
+        display: none;
+    }
+    
+    .slicknav_menu {
+        display: block;
+        background: $footer-color;
+    }
+    .slicknav_btn {
+        background: $footer-color;
+        text-shadow: none;
+        font-size: 16px;
+        font-family: "Geometria-Light";
+    }
+    .slicknav_menu .slicknav_menutxt {
+        text-shadow: none;
+    }
+    .slicknav_nav a:hover {
+        background: lighten($footer-color, 20%);
+        color: $white;
+    }
+    .slicknav_nav .slicknav_row {
+        &:hover {
+            border-radius: 0;
+            background: lighten($footer-color, 20%);
+        }
+    }
+    .slicknav_icon-bar {
+        transition: .3s ease-in-out;
+    }
+    .slicknav_open {
+        .slicknav_icon-bar:nth-child(1) {
+            transform: rotate(45deg) translateY(7px);
+        }
+        .slicknav_icon-bar:nth-child(2) {
+            opacity: 0;
+        }
+        .slicknav_icon-bar:nth-child(3) {
+            transform: rotate(-45deg) translateY(-7px);
+        }
+    }
+
+    #show-filter,
+    #hide-filter {
+        display: block;
+        width: 100%;
+        background: $main-color;
+        border-radius: 30px;
+        font-size: 16px;
+        color: $white;
+        padding: 7px 20px;
+        border: none;
+        font-family: "Geometria-Light";
     }
 
 }
