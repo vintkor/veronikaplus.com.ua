@@ -165,5 +165,94 @@ $('document').ready(function(){
             $('html, body').animate({scrollTop: filterWidget.offset().top}, 800);
         });
     }
+
+    // Модалка Записаться на курсы
+    $('.sec_courses__call').click(function(){
+        var coursesTitle = $(this).siblings('.sec_courses__subcat-title').text();
+        $('.courses-modal__desc').text(coursesTitle);
+        $('.course-value').val(coursesTitle);
+    });
+
+    // Форма записи на курсы
+
+    $('#course-send-btn').click(function(e){
+        e.preventDefault();
+        var form = $('#course-send');
+        $.ajax({
+            method: "POST",
+            url: form.attr('action'),
+            data: form.serialize(),
+            beforeSend: function(){
+                $('#courses-modal').modal('toggle');
+            },
+            success: function(data){
+                swal("Отлично!", "Наш менеджер свяжется с вами в близжайшее время!", "success");
+                form.find('input').each(function(){
+                    $(this).val('');
+                });
+            },
+            error: function(){
+                swal("Ой!", "Что-то пошло не так", "error");
+            }
+        });
+    });
+
+    // Форма с консультацией
+
+    $('.sec_question__btn').click(function(e){
+        e.preventDefault();
+        var modalWindow = $('#courses-modal');
+        modalWindow.modal('toggle');
+        modalWindow.find('.modal-title').text('Необходима консультация о курсах?');
+        modalWindow.find('#post-var').attr('name', 'question');
+    });
+
+    // Форма сбора email адресов /category/beauty_centr/
+
+    $('.subscription__submit').click(function(e){
+        e.preventDefault();
+        var form = $('#subscription__form');
+        if( form.find('.subscription__email').val() <= 0 ) {
+            swal("Ой!", "Необходимо ввести E-mail", "error");
+        } else {
+            $.ajax({
+                method: "POST",
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function(data){
+                    swal("Спасибо!", "Вы не пожплеете об этом!", "success");
+                    form.find('input').each(function(){
+                        $(this).val('');
+                    });
+                },
+                error: function(){
+                    swal("Ой!", "Что-то пошло не так", "error");
+                }
+            });            
+        }
+    });
+
+    // Форма брони /category/beauty_centr/
+
+    $('#bron-btn').click(function(e){
+        e.preventDefault();
+        var form = $('#bron');
+        form.append('<input type="hidden" name="bron">');
+        if( form.find('.inner_centr__form-phone').val() <= 0 ) {
+            swal("Ой!", "Необходимо ввести Ваш номер телефона", "error");
+        } else {
+            $.ajax({
+                method: "POST",
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function(data){
+                    swal("Отлично!", "Наш менеджер свяжется с вами в близжайшее время!", "success");
+                },
+                error: function(){
+                    swal("Ой!", "Что-то пошло не так", "error");
+                }
+            });
+        }
+    });
 	
 });

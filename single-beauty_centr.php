@@ -20,7 +20,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/app/img/price.png"> <?php the_field('стоимость'); ?>
                         </div>
                     </div>
-                    <button class="single_beauty-centr__button pull-right">записаться</button>
+                    <button class="single_beauty-centr__button pull-right" data-toggle="modal" data-target="#service-modal">записаться</button>
                 </div>
             </div>
             <div class="row">

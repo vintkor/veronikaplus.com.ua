@@ -48,7 +48,7 @@
                                 <p class="edu-center__tab-date">Старт программы:<br>
                                     <span><?php echo mysql2date('j/m/Y', get_field('дата') );?></span>
                                 </p>
-                                <h2 class="edu-center__tab-title"><?php the_title(); ?></h2>
+                                <h2 class="edu-center__tab-title sec_courses__subcat-title"><?php the_title(); ?></h2>
                                 <div class="edu-center__tab-field">
                                     <img src="<?php echo get_template_directory_uri(); ?>/app/img/calendar.png"> <?php the_field('сеанс'); ?>
                                 </div>
@@ -58,7 +58,7 @@
                                 <div class="edu-center__tab-field">
                                     <img src="<?php echo get_template_directory_uri(); ?>/app/img/clock.png"> <?php the_field('длительность'); ?>
                                 </div>
-                                <button class="edu-center__tab-button">записать на курс</button>
+                                <button class="edu-center__tab-button sec_courses__call" data-toggle="modal" data-target="#courses-modal">записать на курс</button>
                             </div>
                         </div>
                         <div class="row">
@@ -89,7 +89,7 @@
                                 <p class="edu-center__tab-date">Старт программы:<br>
                                     <span><?php echo mysql2date('j/m/Y', get_field('дата') );?></span>
                                 </p>
-                                <h2 class="edu-center__tab-title"><?php the_title(); ?></h2>
+                                <h2 class="edu-center__tab-title sec_courses__subcat-title"><?php the_title(); ?></h2>
                                 <div class="edu-center__tab-field">
                                     <img src="<?php echo get_template_directory_uri(); ?>/app/img/calendar.png"> <?php the_field('сеанс'); ?>
                                 </div>
@@ -99,7 +99,7 @@
                                 <div class="edu-center__tab-field">
                                     <img src="<?php echo get_template_directory_uri(); ?>/app/img/clock.png"> <?php the_field('длительность'); ?>
                                 </div>
-                                <button class="edu-center__tab-button">записать на курс</button>
+                                <button class="edu-center__tab-button sec_courses__call" data-toggle="modal" data-target="#courses-modal">записать на курс</button>
                             </div>
                         </div>
                         <div class="row">

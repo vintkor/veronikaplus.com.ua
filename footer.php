@@ -65,6 +65,48 @@
   </div>
 </div>
 
+<!-- Модалка записи на курс -->
+<div class="modal courses-modal fade" id="courses-modal" tabindex="-1" role="dialog" aria-labelledby="courses-modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <form id="course-send" action="<?php echo get_template_directory_uri(); ?>/mailto.php">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">записаться на курс</h4>
+            </div>
+            <div class="modal-body align-center">
+                <p class="courses-modal__desc"></p>
+                <input type="hidden" name="course" id="post-var">
+                <input type="hidden" name="course-title" class="course-value">
+                <input type="text" name="name" placeholder="Ваше имя">
+                <input type="text" name="phone" placeholder="телефон *" required>
+                <input type="text" name="email" placeholder="e-mail">
+            </div>
+            <div class="modal-footer align-center">
+                <button id="course-send-btn" type="button" class="courses-modal__btn">отправить</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка записи на процедуру -->
+<div class="modal service-modal fade" id="service-modal" tabindex="-1" role="dialog" aria-labelledby="service-modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">записаться на процедуру</h4>
+      </div>
+      <div class="modal-body align-center">
+        <p><a class="service-modal__phone" href="tel:0931234567">093-123-45-67</a></p>
+        <p><a class="service-modal__phone" href="tel:0931234567">050-123-45-67</a></p>
+        <p><a class="service-modal__phone" href="tel:0931234567">067-123-45-67</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php wp_footer(); ?>
 
 

@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <a href="<?php the_permalink(); ?>" class="sec_centr__more pull-left">подробнее</a>
-                    <button class="sec_centr__call pull-right">записать на процедуру</button>
+                    <button class="sec_centr__call pull-right" data-toggle="modal" data-target="#service-modal">записать на процедуру</button>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -66,15 +66,15 @@
             </p>
         </div>
         <div class="col-md-4 col-sm-12">
-            <form class="inner_centr__form">
+            <form class="inner_centr__form" id="bron" action="<?php echo get_template_directory_uri(); ?>/mailto.php">
                 <div class="inner_centr__form-bg">
                     <input type="text" name="name" placeholder="Ваше имя">
-                    <input type="text" name="phone" placeholder="телефон*">
+                    <input type="text" name="phone" placeholder="телефон*" required class="inner_centr__form-phone">
                     <input type="text" name="service" placeholder="желаемая услуга">
                     <input type="text" name="date" onfocus="(this.type='date')" placeholder="желаемая дата">
                 </div>
                 <div class="align-center">
-                    <input type="submit" name="submit" value="забронировать">
+                    <input type="submit" name="submit" value="забронировать" id="bron-btn">
                 </div>
             </form>
         </div>
@@ -144,8 +144,8 @@ $recent = new WP_Query("cat=$id&showposts=$n&order=asc");?>
                 <p class="subscription__desc">подпишись и узнавай первой о секретных скидках для наших клиентов</p>
             </div>
             <div class="col-md-5">
-                <form id="subscription__form">
-                    <input type="text" name="subscription__email" class="subscription__email" placeholder="E-MAIL">
+                <form id="subscription__form" action="<?php echo get_template_directory_uri(); ?>/mailto.php">
+                    <input type="text" name="subscription__email" class="subscription__email" placeholder="E-MAIL" required>
                     <button type="submit" class="subscription__submit">подписаться</button>
                 </form>
             </div>

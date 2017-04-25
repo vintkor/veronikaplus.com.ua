@@ -167,7 +167,7 @@ Template Name: Главная
                     </div>
                 </div>
                 <a href="<?php the_permalink(); ?>" class="sec_centr__more pull-left">подробнее</a>
-                <button class="sec_centr__call pull-right">записать на процедуру</button>
+                <button class="sec_centr__call pull-right" data-toggle="modal" data-target="#service-modal">записать на процедуру</button>
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -210,7 +210,7 @@ Template Name: Главная
                     </div>
                 </div>
                 <a href="/category/educational_center/#<?php echo get_the_ID(); ?>" class="sec_courses__more pull-left">программа курса</a>
-                <button class="sec_courses__call pull-right">записать на курс</button>
+                <button class="sec_courses__call pull-right" data-toggle="modal" data-target="#courses-modal">записать на курс</button>
                 <div class="clearfix"></div>
             </div>
         </div>
