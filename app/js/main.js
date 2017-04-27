@@ -1,5 +1,7 @@
 $('document').ready(function(){
 
+    $('.mask-phone').inputmask("+38 (999) 999-99-99");
+
     var windowWidth = $(document).width();
 
     $(".owl-carousel-1").owlCarousel({
@@ -178,23 +180,27 @@ $('document').ready(function(){
     $('#course-send-btn').click(function(e){
         e.preventDefault();
         var form = $('#course-send');
-        $.ajax({
-            method: "POST",
-            url: form.attr('action'),
-            data: form.serialize(),
-            beforeSend: function(){
-                $('#courses-modal').modal('toggle');
-            },
-            success: function(data){
-                swal("Отлично!", "Наш менеджер свяжется с вами в близжайшее время!", "success");
-                form.find('input').each(function(){
-                    $(this).val('');
-                });
-            },
-            error: function(){
-                swal("Ой!", "Что-то пошло не так", "error");
-            }
-        });
+        if( !$(".mask-phone").inputmask("isComplete") ) {
+            swal("Ой!", "Необходимо ввести Ваш номер телефона", "error");
+        } else {
+            $.ajax({
+                method: "POST",
+                url: form.attr('action'),
+                data: form.serialize(),
+                beforeSend: function(){
+                    $('#courses-modal').modal('toggle');
+                },
+                success: function(data){
+                    swal("Отлично!", "Наш менеджер свяжется с вами в близжайшее время!", "success");
+                    form.find('input').each(function(){
+                        $(this).val('');
+                    });
+                },
+                error: function(){
+                    swal("Ой!", "Что-то пошло не так", "error");
+                }
+            });            
+        }
     });
 
     // Форма с консультацией
@@ -204,7 +210,24 @@ $('document').ready(function(){
         var modalWindow = $('#courses-modal');
         modalWindow.modal('toggle');
         modalWindow.find('.modal-title').text('Необходима консультация о курсах?');
+        modalWindow.find('.courses-modal__desc').text('');
         modalWindow.find('#post-var').attr('name', 'question');
+    });
+
+    // Форма в контактах
+
+    $('.sec_contact__btn').click(function(e){
+        e.preventDefault();
+        var modalWindow = $('#courses-modal');
+        modalWindow.modal('toggle');
+        modalWindow.find('.modal-title').text('Оставьте Ваши контакты и мы перезвоним Вам.');
+        modalWindow.find('.courses-modal__desc').text('');
+        modalWindow.find('#post-var').attr('name', 'contact');
+    });
+
+    $('.single-product-delivery a').click(function(e){
+        e.preventDefault();
+        $('#my-delivery').modal('toggle');
     });
 
     // Форма сбора email адресов /category/beauty_centr/
@@ -238,7 +261,7 @@ $('document').ready(function(){
         e.preventDefault();
         var form = $('#bron');
         form.append('<input type="hidden" name="bron">');
-        if( form.find('.inner_centr__form-phone').val() <= 0 ) {
+        if( !$(".mask-phone").inputmask("isComplete") ) {
             swal("Ой!", "Необходимо ввести Ваш номер телефона", "error");
         } else {
             $.ajax({
@@ -254,5 +277,7 @@ $('document').ready(function(){
             });
         }
     });
+
+
 	
 });

@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <a href="<?php the_permalink(); ?>" class="sec_centr__more pull-left">подробнее</a>
-                    <button class="sec_centr__call pull-right" data-toggle="modal" data-target="#service-modal">записать на процедуру</button>
+                    <button class="sec_centr__call pull-right" data-toggle="modal" data-target="#service-modal">записаться</button>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
             <form class="inner_centr__form" id="bron" action="<?php echo get_template_directory_uri(); ?>/mailto.php">
                 <div class="inner_centr__form-bg">
                     <input type="text" name="name" placeholder="Ваше имя">
-                    <input type="text" name="phone" placeholder="телефон*" required class="inner_centr__form-phone">
+                    <input type="text" name="phone" placeholder="телефон*" required class="inner_centr__form-phone mask-phone">
                     <input type="text" name="service" placeholder="желаемая услуга">
                     <input type="text" name="date" onfocus="(this.type='date')" placeholder="желаемая дата">
                 </div>

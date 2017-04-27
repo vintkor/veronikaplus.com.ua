@@ -23,9 +23,9 @@
             <div class="col-md-3 col-sm-3">
                 <div class="prefooter__social">
                     <p>мы в соцсетях</p>
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/facebook.png"></a>
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/instagram.png"></a>
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/youtube.png"></a>
+                    <a target="_blank" href="https://www.facebook.com/veronikaplus/"><img src="<?php echo get_template_directory_uri(); ?>/app/img/facebook.png"></a>
+                    <a target="_blank" href="https://www.instagram.com/veronika_borispol/"><img src="<?php echo get_template_directory_uri(); ?>/app/img/instagram.png"></a>
+                    <a target="_blank" href="https://vk.com/id183637344"><img src="<?php echo get_template_directory_uri(); ?>/app/img/vkontakte-logo.png"></a>
                 </div>
             </div>
         </div>
@@ -65,6 +65,21 @@
   </div>
 </div>
 
+<!-- Modal delivery -->
+<div class="modal my-delivery fade" id="my-delivery" tabindex="-1" role="dialog" aria-labelledby="my-delivery" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Доставка</h4>
+      </div>
+      <div class="modal-body">
+        <p class="courses-modal__desc">Есть 2 варианта доставки:<br>самовывоз с города Борисполь по адресу ул. Киевский Шлях, 79а или доставка Новой почтой.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Модалка записи на курс -->
 <div class="modal courses-modal fade" id="courses-modal" tabindex="-1" role="dialog" aria-labelledby="courses-modal" aria-hidden="true">
   <div class="modal-dialog">
@@ -79,7 +94,7 @@
                 <input type="hidden" name="course" id="post-var">
                 <input type="hidden" name="course-title" class="course-value">
                 <input type="text" name="name" placeholder="Ваше имя">
-                <input type="text" name="phone" placeholder="телефон *" required>
+                <input type="text" name="phone" class="mask-phone" placeholder="телефон *" required>
                 <input type="text" name="email" placeholder="e-mail">
             </div>
             <div class="modal-footer align-center">
@@ -99,9 +114,9 @@
         <h4 class="modal-title">записаться на процедуру</h4>
       </div>
       <div class="modal-body align-center">
-        <p><a class="service-modal__phone" href="tel:0931234567">093-123-45-67</a></p>
-        <p><a class="service-modal__phone" href="tel:0931234567">050-123-45-67</a></p>
-        <p><a class="service-modal__phone" href="tel:0931234567">067-123-45-67</a></p>
+        <p><a class="service-modal__phone" href="tel:0931234567">063-527-31-71</a></p>
+        <p><a class="service-modal__phone" href="tel:0931234567">098-523-56-00</a></p>
+        <p><a class="service-modal__phone" href="tel:0931234567">066-404-03-36</a></p>
       </div>
     </div>
   </div>

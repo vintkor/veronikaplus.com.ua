@@ -1,10 +1,21 @@
 <?php get_header(); ?>
 
+<section>
+    <div class="row">
+        <div class="col-xs-12">
+            <?php if ( have_posts() ) : query_posts('page_id=261'); while (have_posts()) : the_post(); ?>
+            <h1 class="text-center edu-center__maintitle"><?php the_title();?></h1>
+            <div class="page-about__text"><?php the_content(); ?></div>
+            <? endwhile; endif; wp_reset_query(); ?>
+        </div>
+    </div>
+</section>
+
 <section class="edu-center">
-    <h1 class="edu-center__maintitle align-center">ПРОГРАММА КУРСОВ</h1>
+    <h2 class="edu-center__maintitle align-center">ПРОГРАММА КУРСОВ</h3>
     <div class="row">
         <div class="col-md-5 col-sm-4">
-            <h2 class="edu-center__cat-maintitle">НАПРАВЛЕНИЕ ОБУЧЕНИЯ</h2>
+            <h3 class="edu-center__cat-maintitle">НАПРАВЛЕНИЕ ОБУЧЕНИЯ</h3>
             <div class="edu-center__tabs2-nav edu-center__tabs2-nav-1 animated fadeIn">
                 <ul class="edu-center__cat-list">
                     <?php $count2 = 0; ?>

@@ -40,6 +40,26 @@ if(isset($_POST['question'])){
     echo $message;
 }
 
+if(isset($_POST['contact'])){
+    $to = 'mail@test1.organica.pp.ua,alkv84@yandex.ru';
+    $subject = 'Перезвоните - мне необходима консультация';
+    $message = '
+        <html>
+            <head>
+                <title>Перезвоните - мне необходима консультация</title>
+            </head>
+            <body>
+                <p><strong>Имя отправителя:</strong> '. $_POST['name'] .'</p>
+                <p><strong>E-mail отправителя:</strong> '. $_POST['email'] .'</p>
+                <p><strong>Телефон отправителя:</strong> '. $_POST['phone'] .'</p>
+            </body>
+        </html>';
+    $headers  = "Content-type: text/html; charset=utf-8 \r\n";
+    $headers .= "From: Veronika+\r\n";
+    mail($to, $subject, $message, $headers);
+    echo $message;
+}
+
 if(isset($_POST['subscription__email'])){
     $to = 'mail@test1.organica.pp.ua,alkv84@yandex.ru';
     $subject = 'Почтовый аддресс для рассылки';

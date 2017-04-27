@@ -48,7 +48,7 @@
                     <p class="desc">Учебный центр</p>
                 </div>
                 <div class="header__button__wrapper">
-                    <button class="header__button" data-toggle="modal" data-target="#my-bron">оставить заявку</button>
+                    <button class="header__button" data-toggle="modal" data-target="#my-bron">онлайн запись</button>
                 </div>
                 <div class="header__cart">
                     <span class="header__cart__count">

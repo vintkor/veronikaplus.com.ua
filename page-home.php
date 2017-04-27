@@ -292,7 +292,7 @@ Template Name: Главная
             <div class="sec_contact__widget">
                 <?php dynamic_sidebar('sec_contact'); ?>
                 <div class="align-center">
-                    <button class="sec_contact__btn">оставить заявку</button>
+                    <button class="sec_contact__btn">Связатся с нами</button>
                 </div>                
             </div>
         </div>
